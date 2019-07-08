@@ -1,0 +1,41 @@
+.PokeCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  width: 15.5vw;
+  margin: 1vh 3vw;
+  border: 1px solid black;
+  height: 40vh;
+  border-radius: 5px;
+  transition: 0.2s linear;
+}
+.PokeCard-Name {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.PokeCard-Type {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.PokeCard-Image {
+  width: 60%;
+  transition: 0.3s linear;
+}
+.PokeCard-points {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.PokeCard:hover .PokeCard-Image{
+  width: 85%;
+}
+.PokeCard:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}

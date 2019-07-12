@@ -8,6 +8,8 @@ class PokeDex extends Component  {
     console.log(this.props);
     return (
       <div className="PokeDex">
+        <h2 className="PokeDex-winner">{this.props.isWinner ? 'Winner!' : 'Loser :('}</h2>
+        <small className="PokeDex-exp">Total Exp: {this.props.exp}</small>
         {this.props.hand.map(p => (
           <PokeCard key={p.id} id={p.id} name={p.name} type={p.type} exp={p.base_xp} />
         ))}

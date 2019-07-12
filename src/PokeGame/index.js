@@ -16,17 +16,26 @@ class PokeGame extends Component {
   };
 
   render() {
+    // create two hands
     let hand1 = [];
     let hand2 = [ ...this.props.pokemon ];
+
+    // splice and push half the pokemon into hand1
     while (hand1.length < hand2.length) {
       let randIndx = Math.floor((Math.random() * hand2.length));
       let randPokemon = hand2.splice(randIndx, 1)[0];
       hand1.push(randPokemon);
     }
+
+    // check if winner
+    let exp1 = hand1.reduce((exp,pokemon) => exp + pokemon.base_xp, 0);
+    let exp2 = hand2.reduce((exp,pokemon) => exp + pokemon.base_xp, 0);
+
     return (
+      // send two pokedex components different hands as props
       <div className="PokeGame">
-        <PokeDex hand={hand1} />
-        <PokeDex hand={hand2}/>
+        <PokeDex hand={hand1} exp={exp1} isWinner={exp1 > exp2}/>
+        <PokeDex hand={hand2} exp={exp2} isWinner={exp2 > exp1}/>
       </div>
     )
   }

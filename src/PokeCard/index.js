@@ -3,8 +3,8 @@ import './PokeCard.css';
 
 class PokeCard extends Component {
   render() {
-    const { id, name, type, base_xp } = this.props;
-
+    const { id, name, type, exp } = this.props;
+    console.log(this.props);
     let color;
     if (type === "fire") {
       color = 'red';
@@ -22,7 +22,7 @@ class PokeCard extends Component {
       <div className="PokeCard">
         <h2 className="PokeCard-Name">{name}</h2>
         <h4 className="PokeCard-Type">Type: <span style={{color: color}}>{type}</span></h4>
-        <p className="PokeCard-points">Experience: {base_xp}</p>
+        <p className="PokeCard-points">Experience: {exp}</p>
         <img className="PokeCard-Image" alt="pokemon" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} />
       </div>
     )

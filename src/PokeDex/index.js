@@ -5,10 +5,16 @@ import './PokeDex.css';
 class PokeDex extends Component  {
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
+    let title;
+    if (this.props.isWinner === true) {
+      title = <h1 className="PokeDex-winner">Winner!</h1>
+    } else {
+      title = <h1 className="PokeDex-loser">Loser!</h1>
+    }
     return (
       <div className="PokeDex">
-        <h2 className="PokeDex-winner">{this.props.isWinner ? 'Winner!' : 'Loser :('}</h2>
+        {title}
         <small className="PokeDex-exp">Total Exp: {this.props.exp}</small>
         {this.props.hand.map(p => (
           <PokeCard key={p.id} id={p.id} name={p.name} type={p.type} exp={p.base_xp} />

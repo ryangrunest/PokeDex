@@ -1,6 +1,6 @@
 .PokeDex {
   width: 100vw;
-  height: 100vh;
+  height: 45vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

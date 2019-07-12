@@ -1,10 +1,10 @@
 import React from 'react';
-import PokeDex from './PokeDex';
+import PokeGame from './PokeGame';
 
 function App() {
   return (
     <div className="App">
-      <PokeDex />
+      <PokeGame />
     </div>
   );
 }

@@ -23,7 +23,9 @@ class PokeCard extends Component {
         <h2 className="PokeCard-Name">{name}</h2>
         <h4 className="PokeCard-Type">Type: <span style={{color: color}}>{type}</span></h4>
         <p className="PokeCard-points">Experience: {exp}</p>
-        <img className="PokeCard-Image" alt="pokemon" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} />
+        <div className="PokeCard-img-holder">
+          <img className="PokeCard-Image" alt="pokemon" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} />
+        </div>
       </div>
     )
   }

@@ -49,7 +49,7 @@
   border-radius: 5px;
   width: 90%;
   height: 50%;
-  background: rgba(110, 110, 110, 0.432);
+  background: rgba(110, 110, 110, 0.123);
 }
 .PokeCard:hover .PokeCard-Image{
   width: 90%;
